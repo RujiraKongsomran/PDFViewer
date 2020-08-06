@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int PICK_PDF_CODE = 1000;
     Button btnOpenAssets;
     Button btnOpenStorage;
+    Button btnOpenFromInternet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnOpenAssets = (Button) findViewById(R.id.btnOpenAssets);
         btnOpenStorage = (Button) findViewById(R.id.btnOpenStorage);
+        btnOpenFromInternet = (Button) findViewById(R.id.btnOpenFromInternet);
         btnOpenAssets.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -68,7 +70,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(Intent.createChooser(browserPDF, "Select PDF"), PICK_PDF_CODE);
             }
         });
+
+        btnOpenFromInternet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ViewActivity.class);
+                intent.putExtra("ViewType", "internet");
+                startActivity(intent);
+            }
+        });
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
