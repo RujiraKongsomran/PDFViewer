@@ -30,4 +30,12 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    // PDF Viewer : To read PDF
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+    // File-Loader : To download file from Internet
+    implementation 'com.github.kk121:File-Loader:1.2'
+
+    // Dexter : To easy request runtime permission
+    implementation 'com.karumi:dexter:5.0.0'
 }
