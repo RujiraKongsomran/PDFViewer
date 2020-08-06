@@ -1,33 +1,30 @@
 package com.rujirakongsomran.pdfviewer;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.Manifest;
 import android.content.Intent;
-import android.content.IntentSender;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
-import com.karumi.dexter.listener.PermissionDeniedResponse;
-import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.multi.BaseMultiplePermissionsListener;
-import com.karumi.dexter.listener.single.BasePermissionListener;
+import com.ornach.nobobutton.NoboButton;
 
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final int PICK_PDF_CODE = 1000;
-    Button btnOpenAssets;
-    Button btnOpenStorage;
-    Button btnOpenFromInternet;
+    NoboButton btnOpenAssets;
+    NoboButton btnOpenStorage;
+    NoboButton btnOpenFromInternet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,9 +46,10 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }).check();
 
-        btnOpenAssets = (Button) findViewById(R.id.btnOpenAssets);
-        btnOpenStorage = (Button) findViewById(R.id.btnOpenStorage);
-        btnOpenFromInternet = (Button) findViewById(R.id.btnOpenFromInternet);
+        btnOpenAssets = (NoboButton) findViewById(R.id.btnOpenAssets);
+        btnOpenStorage = (NoboButton) findViewById(R.id.btnOpenStorage);
+        btnOpenFromInternet = (NoboButton) findViewById(R.id.btnOpenFromInternet);
+
         btnOpenAssets.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 
 

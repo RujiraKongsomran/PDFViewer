@@ -12,23 +12,57 @@
         android:layout_centerInParent="true"
         android:orientation="vertical">
 
-        <Button
+<!--        <Button-->
+<!--            android:id="@+id/btnOpenAssets"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="VIEW FROM ASSETS" />-->
+
+        <com.ornach.nobobutton.NoboButton
             android:id="@+id/btnOpenAssets"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="VIEW FROM ASSETS" />
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            app:nb_text="VIEW FROM ASSETS"
+            app:nb_borderColor="#FFFFFF"
+            app:nb_borderWidth="2dp"
+            app:nb_backgroundColor="#9575cd"
+            app:nb_focusColor="#65499c"
+            app:nb_textColor="#FFF"
+            app:nb_radius="5dp"
+            app:nb_fontIcon="&#xf07b;"/>
 
-        <Button
+        <com.ornach.nobobutton.NoboButton
             android:id="@+id/btnOpenStorage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="VIEW FROM DEVICE" />
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            app:nb_text="VIEW FROM DEVICE"
+            app:nb_borderColor="#FFFFFF"
+            app:nb_borderWidth="2dp"
+            app:nb_backgroundColor="#42a5f5"
+            app:nb_focusColor="#0077c2"
+            app:nb_textColor="#FFF"
+            app:nb_radius="5dp"
+            app:nb_fontIcon="&#xf07c;"/>
 
-        <Button
+        <com.ornach.nobobutton.NoboButton
             android:id="@+id/btnOpenFromInternet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="VIEW FROM INTERNET" />
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            app:nb_text="VIEW FROM INTERNET"
+            app:nb_borderColor="#FFFFFF"
+            app:nb_borderWidth="2dp"
+            app:nb_backgroundColor="#4db6ac"
+            app:nb_focusColor="#00867d"
+            app:nb_textColor="#FFF"
+            app:nb_radius="5dp"
+            app:nb_fontIcon="&#xf1eb;"/>
+
     </LinearLayout>
 
 </RelativeLayout>

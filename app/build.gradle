@@ -38,4 +38,6 @@ dependencies {
 
     // Dexter : To easy request runtime permission
     implementation 'com.karumi:dexter:5.0.0'
+
+    implementation 'com.ornach.nobobutton:nobobutton:1.6'
 }
