@@ -17,6 +17,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="VIEW FROM ASSETS" />
+        <Button
+            android:id="@+id/btnOpenStorage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VIEW FROM DEVICE" />
     </LinearLayout>
 
 </RelativeLayout>
